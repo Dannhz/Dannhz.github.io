@@ -4,6 +4,10 @@ body{
     overflow-y: scroll;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 *
 h1, h2, h3, p, a, li{color: white;font-size: 18px;}
 
@@ -168,7 +172,7 @@ nav ul li a:hover{
     background-size: cover;
 }
 .intro{
-    padding-top: 310px;
+    padding-top: 280px;
     text-align: center;
 }
 
@@ -176,7 +180,7 @@ nav ul li a:hover{
 .intro h2{font-size: 18px;}
 .intro h1::after{
     content: '';
-    width: 100px;
+    width: 70px;
     height: 2px;
     background-color: white;
     display: block;
@@ -189,6 +193,7 @@ nav ul li a:hover{
     width: 126px;
     height: 32px;
     margin: 15px auto;
+    margin-bottom: 25px;
 }
 .redes_icon{
     float: left;
@@ -202,6 +207,23 @@ nav ul li a:hover{
 }
 .redes_icon:hover{
     background-color: #adaeb2;
+}
+
+.cv a{
+    text-align: center;
+    height: 40px;
+    padding: 0px 15px;
+    padding-top: 8px;
+    display: inline-block;
+    background-color:  rgba(0, 0, 0, .6);
+    border: 2px solid rgba(255, 255, 255, .5);
+    transition:  .25s;
+
+}
+.cv a:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, .85);
+
 }
 
 /* Sobre */
@@ -299,7 +321,7 @@ nav ul li a:hover{
 .conhecimentos_img .layerMoon3{
     background: url("../imgs/silhueta/lua.png") no-repeat;
     background-color: #292631;
-    background-attachment: fixed;
+    background-attachment:fixed;
     background-position-x: 1000px;
     background-position-x: calc( 50% + 385px);
     z-index: 4;
@@ -451,23 +473,46 @@ nav ul li a:hover{
     bottom: 0;
     left: 0;
     background-color: rgba(0, 0, 0, .5);
-    z-index: 2;
+    z-index: 10;
     display: none;
     animation: modal-open .5s;
 }
 
 .modal_conteudo{
     background-color: #FFF;
-    width: 55%;
+    width: 70%;
+    max-height: 80%;
     margin: 0 auto;
-    margin-top: 150px;
+    margin-top: 60px;
     padding: 30px;
+    overflow-y: scroll;
     position: relative;
+    z-index: 11;
 } 
+.modal_midia figure{
+    margin-bottom: 25px;
+}
+
+.modal_midia{
+    width: 100%;
+    margin: 0 auto;
+}
+.modal_midia img, .modal_midia video{
+    float: left;
+}
+.modal_midia img:nth-child(2){
+    float: right;
+}
 
 .modal_conteudo p, .modal a{
     color: #666;
 } 
+.modal h3{
+    margin-bottom: 0;
+}
+.modal_local{
+    font-size: 16px;
+}
 
 .modal_fechar{
     position: absolute;
@@ -691,9 +736,7 @@ footer .redes_icon:hover{
         text-align: right;
     }
     .modal_conteudo{
-        max-height: 560px;
-        margin-top: 40px;
-        overflow-y: scroll;
+       
         width: 90%;
     } 
     .modal_conteudo h3{
