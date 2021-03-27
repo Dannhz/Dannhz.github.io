@@ -6,7 +6,6 @@ const layer_4 = document.getElementById('layer4');
 const layer_5 = document.getElementById('layer5');
 var waiting = false;
 
-
 const layerMoon = document.getElementById('moon');
 const layerMoonLight = document.getElementById('moonLight');
 
@@ -20,7 +19,6 @@ linksModal.forEach(function(btn){
         var modal = btn.getAttribute('data-modal');
         document.getElementById(modal).style.display = "block";
         document.body.style.overflow = "hidden";
-
     };
 })
 
@@ -33,22 +31,18 @@ btnsModalClose.forEach(function(btn){
 window.onclick = function(e){
     if(e.target.className === "modal"){
         e.target.style.display = "none";
-        
         document.body.style.overflow = "scroll";
     }
 }
 
 window.onscroll = (function(){
-    if(waiting){
-        return;
-    }
+    if(waiting){return;}
     waiting = true;
-    console.log("scrollo");
     animeScroll();
 
     setTimeout(function(){
         waiting = false
-    }, 25);
+    }, 5);
 });
 
 //Funções
@@ -65,19 +59,17 @@ var animeScroll = function(){
     }
 
     //Efeito Parallax - Lua
-    var moonLightRect = layerMoonLight.getBoundingClientRect();
-    moonLightRectInicio = moonLightRect.top - window.innerHeight + 150;
+        //Garante que o efeito só aconteça enquanto a silhueta estiver visível
 
+    animLuaTrigger = layerMoonLight.getBoundingClientRect().top - window.innerHeight ;
+    if(animLuaTrigger <= 0 && animLuaTrigger >= -1000){
+        layerMoon.style.backgroundPositionY = ((layerMoon.getBoundingClientRect().top/.66) - 50)  + 'px';
+        luaOpacityTrigger = animLuaTrigger + 200;
 
-        //Garante que o efeito só aconteça quando a imagem estiver visível
-    if(moonLightRectInicio <= 0 && moonLightRectInicio >= -1000){
-        opacidadeLua = layerMoonLight.style.opacity;
-        formulaOpacidade = (-(moonLightRectInicio/500)).toFixed(1);
-        if(formulaOpacidade > 0 && formulaOpacidade < 1 && opacidadeLua != formulaOpacidade){
+        if(luaOpacityTrigger <= 0 && luaOpacityTrigger >= -300){
+            formulaOpacidade = (-(luaOpacityTrigger/300)).toFixed(2);
             layerMoonLight.style.opacity = formulaOpacidade;
         }
-        var moonRect = layerMoon.getBoundingClientRect();
-        layerMoon.style.backgroundPositionY = (moonRect.top/.66)  + 'px';
     }
 
     //Animação de elementos

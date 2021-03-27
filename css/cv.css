@@ -1,0 +1,323 @@
+body{
+    background-color: #ccc;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    transition: 1.25s;
+}
+
+html{
+    font-family: 'Open Sans';
+}
+.btn_container{
+    width: 440px;
+    height: 35px;
+    margin: 0 auto;
+}
+.btn, a{
+    float: left;
+    padding: 5px;
+    margin: 15px;
+    width: 190px;
+    height: 35px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .8);
+    border: 2px solid rgba(255, 255, 255, .8);
+    transition: .3s;
+}
+
+.btn:hover, a:hover{
+    background-color: #1a3965;
+    border: 2px solid rgba(255, 255, 255, .8);
+    cursor:pointer;
+}
+
+/* Textos */
+
+h1, h2, h3{
+    text-align: center;
+}
+
+h1{
+    color: #fff;
+    text-align: center;
+    font-size: 41px;
+    line-height: 41px;
+}
+
+h3{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+p, h2, h3, li, a{
+    color: #cccccc;
+    
+}
+
+.cv{
+    clear: both;
+    max-width: 960px;
+    margin: 20px auto;
+    background-color: #171718;
+    position: relative;
+    height: 1358px;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, .7);
+
+}
+.separador{ 
+    content: '';
+    width: 90px;
+    height: 2px;
+    display: block;
+    margin: 30px auto;
+    background-color: white;
+}
+
+/* divisoes */
+.esq{
+    position: absolute;
+    width: 365px;
+    height: 1358px;
+    background-color: #1a3965;
+    padding: 0 33px;
+    padding-bottom: 45px;
+}
+.dir{
+    position: absolute;
+    left: 365px;
+    width: 595px;
+    background-color: #171718;
+    height: 1358px;
+    padding: 0 65px;
+    padding-bottom: 45px;
+}
+
+/* Lado Esquerdo */
+    /* Cabeçalho Esquerdo */
+.esq_header{
+    width:365px;
+    background-color: #112644;
+    padding: 45px 33px;
+    position: relative;
+    left: -33px;
+}
+.foto{
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    background-image: url("../imgs/cv/perfil.png");
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+    /* Contato */
+.contato ul li{
+    line-height: 30px;
+}
+.contato ul li p{
+    display: inline-block;
+}
+.contato_icon{
+    transform: translateY(7px);
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    margin-right: 10px;
+}
+.email{background-image: url("../imgs/cv/email_icon.png");}
+.site{background-image: url("../imgs/cv/site_icon.png");}
+.cel{background-image: url("../imgs/cv/cel_icon.png");}
+.linkedin{background-image: url("../imgs/cv/linkedin_icon.png");}
+
+
+    /* Habilidades */
+
+.habilidades ul {
+    text-align: center;
+}
+.habilidade_texto{
+    display: inline-block;
+    padding: 2px 5px;
+    border-radius: 10px;
+    background-color: #ccc;
+    color: #1a3965;
+    margin: 0 4px 8px 0;
+    font-weight: 600;
+}
+
+    /* Hobbie */
+.hobbie_container{
+    display: inline-block;
+    width: 68px;
+    margin: 0px 1.8px;
+}
+.hobbie_icon{
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background-color: #ccc;
+}
+.movies{background-image: url("../imgs/cv/movies_icon.png");}
+.codar{background-image: url("../imgs/cv/codar_icon.png");}
+.game{background-image: url("../imgs/cv/game_icon.png");}
+.astronomia{background-image: url("../imgs/cv/astronomia_icon.png");}
+
+.hobbie_container p{
+    text-align: center;
+}
+.hobbie_container:last-child p{
+    transform: translateX(-7px);
+}
+
+/* Lado Direito */
+    /* Cabeçalho Direito */
+.dir h2{
+    font-size: 30px;
+}
+.dir_header{
+    height: 115px;
+    width: 595px;
+    position: relative;
+    left: -65px;
+    padding-top: 45px;
+    background-color: #112644;
+    padding-bottom: 85px;
+}
+
+    /* Estilos Gerais - Lado direito */
+.dir h3{
+    margin-top: 30px;
+    margin-bottom: 19px;
+}
+li{
+    position: relative;
+}
+.topico{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border:7px solid #171718;
+    background-color: white;
+    position: absolute;
+    left: -36px;
+    top: 2px;
+}
+.topico_detalhe{
+    color: #5f5f5f;
+    text-indent: 15px;
+}
+.topico_detalhe:last-child{
+    margin-bottom: 16px;
+}
+
+.formacao , .cursos , .conhecimentos {
+    position: relative
+}
+
+.topico_linha{
+    content: '';
+    width: 130px;
+    border-left:   2px solid white;
+    border-top:    2px solid white;
+    border-bottom: 2px solid white;
+    border-radius: 7px;
+    border-color: white;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    position: absolute;
+    left: -28px;
+    top: 15px;
+}
+.formacao .topico_linha{
+    height: 287px;
+}
+
+.cursos .topico_linha{
+    height: 281px;
+}
+
+.conhecimentos .topico_linha{
+    height: 221px;
+}
+
+
+    /* Conhecimentos */ 
+.conhecimentos li{
+    display: inline-block;
+    width: 230px;
+}
+.conhecimentos li:nth-child(even){
+    text-align: right;
+}
+.conhecimentos li:nth-child(even) .topico{
+    left: unset;
+    right: -37px;
+}
+.conhecimentos li:nth-child(even) .topico_detalhe {
+    direction: rtl;
+}
+.conhecimentos .topico_linha:nth-child(2){
+    transform: rotate(180deg);
+    left:unset;
+    right: -28px;
+}
+
+    /* Idiomas */
+.idioma_nota{
+    width: 8px;
+    height: 8px;
+    background-color: #5f5f5f;
+    border-radius: 50%;
+    display: inline-block;
+    transform: translateY(-1px);
+}
+.fill{
+    background-color: white;
+}
+.nota_container{
+    position: absolute;
+    left: 110px;
+    transform: translateY(-22px);
+}
+
+
+/* Estilo de Impressão */
+    /* Textos */
+.tradicional_h1{color: black;}
+.tradicional_texto{color: #111;}
+.tradicional_topicos_detalhe{color: #666;}
+
+
+    /* Estilos Gerais */
+.tradicional_topico_linha{border-color: #555;}
+.tradicional_topico{border:7px solid white; background-color: #555;}
+.tradicional_foto{background-image: url("../imgs/cv/tradicional_perfil.png");}
+.tradicional_separador{background-color: black;}
+
+
+    /* Cv Backgrounds */
+.tradicional_esq_bg{background-color: #eee;}
+.tradicional_dir_bg{background-color: #fff;}
+.tradicional_header_bg{background-color: #ddd;}
+
+
+    /* Idiomas */
+.tradicional_idioma_nota{background-color: #adadad;}
+.tradicional_fill{background-color: black;}
+
+    /* Contato */
+.tradicional_email{background-image: url("../imgs/cv/tradicional_email_icon.png");}
+.tradicional_site{background-image: url("../imgs/cv/tradicional_site_icon.png");}
+.tradicional_cel{background-image: url("../imgs/cv/tradicional_cel_icon.png");}
+.tradicional_linkedin{background-image: url("../imgs/cv/tradicional_linkedin_icon.png");}
+
+    /* Hobbies */
+.tradicional_movies{background: url("../imgs/cv/tradicional_movies_icon.png") #333;}
+.tradicional_codar{background: url("../imgs/cv/tradicional_codar_icon.png") #333;}
+.tradicional_game{background: url("../imgs/cv/tradicional_game_icon.png") #333;}
+.tradicional_astronomia{background: url("../imgs/cv/tradicional_astronomia_icon.png") #333;}
+

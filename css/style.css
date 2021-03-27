@@ -8,7 +8,6 @@ html{
     scroll-behavior: smooth;
 }
 
-*
 h1, h2, h3, p, a, li{color: white;font-size: 18px;}
 
 *, *:before, *:after {
@@ -120,15 +119,12 @@ nav ul li a:hover{
 
 
 /* Parallax */
-
 .parallax *{
     width: 100%;
     height: 900px;
     position: fixed;
     top: 0;
-
 }
-
 #layer1{
     background: url("../imgs/header/layer1.png");
     background-position: right;
@@ -140,35 +136,30 @@ nav ul li a:hover{
     background-size: cover;
     background-position: 30%;
     z-index: -3;
-
 }
 #layer3{
     background: url("../imgs/header/layer3.png");
     background-size: cover;
     background-position: 25%;
     z-index: -4;
-
 }
 #layer4{
     background: url("../imgs/header/layer4.png");
     background-size: cover;
     background-position: 55%;
     z-index: -5;
-
 }
 #layer5{
     background: url("../imgs/header/bg.jpg");
     background-size: cover;
     background-position: center;
     z-index: -6;
-
 }
 
 /* Header/intro */
 .header{
     width: 100%;
     height: 900px;
-
     background-size: cover;
 }
 .intro{
@@ -190,23 +181,26 @@ nav ul li a:hover{
 }
 
 .redes_icons{
-    width: 126px;
+    width: 132px;
     height: 32px;
     margin: 15px auto;
     margin-bottom: 25px;
 }
 .redes_icon{
     float: left;
-    width: 34px;
-    height: 34px;
+    width: 36px;
+    height: 36px;
     margin: 0 4px;
-    padding:7px;
+    padding-top:7px;
     border-radius: 50%;
     background-color: rgba(0, 0, 0, .5);
+    border: 1px solid rgba(255, 255, 255, .5);
+
     transition: background-color .25s;
 }
 .redes_icon:hover{
-    background-color: #adaeb2;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, .85);
 }
 
 .cv a{
@@ -218,19 +212,16 @@ nav ul li a:hover{
     background-color:  rgba(0, 0, 0, .6);
     border: 2px solid rgba(255, 255, 255, .5);
     transition:  .25s;
-
 }
 .cv a:hover{
     background-color: rgba(0, 0, 0, 0.3);
     border: 2px solid rgba(255, 255, 255, .85);
-
 }
 
 /* Sobre */
 .sobre{
     background-color: #171718;
     padding: 40px 0;
-
 }
 .sobre .container{
     height: 550px;
@@ -320,11 +311,16 @@ nav ul li a:hover{
 }
 .conhecimentos_img .layerMoon3{
     background: url("../imgs/silhueta/lua.png") no-repeat;
-    background-color: #292631;
+    background-size: 250px;
     background-attachment:fixed;
     background-position-x: 1000px;
     background-position-x: calc( 50% + 385px);
     z-index: 4;
+}
+.conhecimentos_img .layerMoon4{
+    background-color: #292631;
+    background-size: cover;
+    z-index: 3;
 }
 
 .softwares{
@@ -360,13 +356,13 @@ nav ul li a:hover{
     height: 92px;
     position: relative;
 }
+
 .linguagens{background-color:#48679c;}
 .web_design{background-color:#bccd00;}
 .design{background-color:#9c4848;}
 .escritorio{background-color:#489c7b;}
 .bd{background-color:#cd7d00;}
 .outros{background-color:#81489c;}
-
 
 /* Trajetoria */
 .trajetoria{
@@ -384,8 +380,6 @@ nav ul li a:hover{
     text-align: center;
     margin-bottom: 30px;
 }
-
-
 .timeline::after{
     content: '';
     width: 1px;
@@ -394,7 +388,6 @@ nav ul li a:hover{
     position: absolute;
     left: 50%; 
 }
-
 .balao{
     width: 380px;
     background-color: #c1c1c7;
@@ -490,7 +483,9 @@ nav ul li a:hover{
     z-index: 11;
 } 
 .modal_midia figure{
+    margin: 0;
     margin-bottom: 25px;
+
 }
 
 .modal_midia{
@@ -534,19 +529,18 @@ nav ul li a:hover{
 
 }
 
+/* Rodapé */
 .footer_top{
     width: 100%;
     height: 170px;
     background-color: #171718;
 }
-
 .footer_top a{
     color: #555;
 }
 .footer_top .redes_icons{
     margin: 0 auto;
 }
-
 .footer_bottom{
     padding-top: 6px;
     width: 100%;
@@ -559,10 +553,10 @@ nav ul li a:hover{
     color: #555;
     margin: 0;
 }
-
-
 footer .redes_icon{
     background-color: rgba(0, 0, 0, .1);
+    text-align: center;
+
 }
 footer .redes_icon:hover{
     background-color: rgba(255, 255, 255, .1);
