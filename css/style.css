@@ -43,40 +43,6 @@ h3{
     clear: both;
 }
 
-/* Animações */
-
-[data-anime]{
-    opacity: 0;
-    transition: .3s;
-}
-
-[data-anime="left"]{
-    transform: translate3d(-37px,0,0);
-}
-
-[data-anime="-"]{
-    transition: .7s;
-}
-
-[data-anime="right"]{
-    transform: translate3d(37px,0,0);
-}
-
-[data-anime].animate{
-    opacity: 1;
-    transform: translate3d(0px,0px,0px);
-}
-
-@keyframes modal-open{
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-}
-
-
 /* Icon Overlay */
 .icon_overlay{
     width: 100%;
@@ -84,7 +50,7 @@ h3{
     opacity: 0;
     background-color: rgba(0, 0, 0, .5);
     position: absolute;
-    padding-top: 45px;
+    padding-top: calc(100% - 50px);
     transition: opacity .25s, padding-top .25s ;
 }
 .icon_overlay p{
@@ -94,7 +60,7 @@ h3{
 }
 .icon_overlay:hover{
     opacity: 1;
-    padding-top: 65px;
+    padding-top: calc(100% - 30px);
 }
 
 /* Menu bar */
@@ -260,11 +226,11 @@ nav ul li a:hover{
 .sobre_quora{
     text-align: right;
 }
-.sobre a{
+.sobre a, .portfolio a{
     text-decoration: underline;
     color: #adaeb2;
 }
-.sobre a:hover{
+.sobre a:hover, .portfolio a:hover{
     text-decoration: underline;
     color: white;
 }
@@ -364,6 +330,110 @@ nav ul li a:hover{
 .bd{background-color:#cd7d00;}
 .outros{background-color:#81489c;}
 
+/* Portfolio */
+
+.portfolio{
+    background-color:  #171717;
+}
+.portfolio .container{
+    padding: 40px 0;
+}
+
+.portfolio h3, .trajetoria h3{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.portfolio_container{
+    width: 100%;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap:wrap;
+    margin: -5px 0px;
+}
+.blender_thumb{
+    margin: 15px 30px;
+}
+.blender_pic{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border: 1px solid black;
+}
+
+.artstation_info{
+    width: 100%;
+    height: 40px;
+    bottom: 0;
+    padding: 5px 55px;
+    border: 1px solid black;
+    border-top: none;
+    align-items: center;
+}
+.artstation_info img{
+    transform: translateY(3px);
+    opacity: .7;
+    margin-left: 2px;
+}
+.artstation_likes{
+float: right;
+}
+.artstation_views{
+    float: left;
+}
+
+.artstation_info p{
+    width: 20px;
+    font-size: .875em;
+    display: inline;
+    color: black;
+}
+.arduino_thumb{
+    width: 350px;
+    height: 350px;
+    position: relative;
+    margin: 30px 30px;
+}
+
+#delta{
+    background: url(../imgs/portfolio/delta.png);
+    background-size: cover;
+}
+#conde-dofus{
+    background: url(../imgs/portfolio/conde-dofus.png);
+    background-size: cover;
+}
+#conde-wakfu{
+    background: url(../imgs/portfolio/harebourg-wakfu.png);
+    background-size: cover;
+}
+#jigen{
+    background: url(../imgs/portfolio/jigen.png);
+    background-size: cover;
+}
+#qilby{
+    background: url(../imgs/portfolio/qilby.png);
+    background-size: cover;
+}
+
+#delta ~ .artstation_info{background-color: #95627d;}
+#conde-dofus ~ .artstation_info{background-color: #2b6469;}
+#conde-wakfu ~ .artstation_info{background-color: #2b4d69;}
+#jigen ~ .artstation_info{background-color: #a44b55;}
+#qilby ~ .artstation_info{background-color: #08dadf;}
+
+#port_arduino{
+    background: url(../imgs/portfolio/Arduino.png);
+    background-size: 350px 350px;
+}
+#port_wemos{
+    background: url(../imgs/portfolio/WeMos.png);
+    background-size: 350px 350px;
+}
+
+
 /* Trajetoria */
 .trajetoria{
     background-color: #c1c1c7;
@@ -376,10 +446,7 @@ nav ul li a:hover{
 .trajetoria h3, .trajetoria p{
     color: #171718;
 }
-.trajetoria h3{
-    text-align: center;
-    margin-bottom: 30px;
-}
+
 .timeline::after{
     content: '';
     width: 1px;
@@ -739,5 +806,46 @@ footer .redes_icon:hover{
     } 
     .conhecimentos_img .layerMoon3{
         background-position-x: calc( 50% + 160px);
+    }
+}
+
+
+/* Animações */
+[data-direction], .blender_thumb{
+    opacity: 0;
+}
+[data-direction="left"]{
+    transform: translate3d(-37px,0,0);
+}
+[data-direction="right"]{
+    transform: translate3d(37px,0,0);
+}
+[data-direction="-"]{
+    transform: translate3d(0,0,0);
+}
+
+*[data-scroll="out"]{
+    transition-delay: 100ms;
+    transition: 700ms;
+}
+*[data-scroll="in"]{
+    opacity: 1;
+    transition: 700ms;
+    transform: translate3d(0px,0px,0px);
+}
+
+
+
+
+.blender_thumb[data-scroll="out"],#conde-wakfu[data-scroll="out"], #jigen[data-scroll="out"], #qilby[data-scroll="out"]{
+    transition: 300ms;
+}
+
+@keyframes modal-open{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
     }
 }

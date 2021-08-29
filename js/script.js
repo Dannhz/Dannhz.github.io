@@ -1,3 +1,33 @@
+ScrollOut({
+    targets:'[data-direction]',
+    threshold: .3,
+});
+ScrollOut({
+    targets:'#portfolio_blender',
+    onShown: function(){
+        if(document.getElementsByTagName("html")[0].getAttribute("data-scroll-dir-y") == 1){
+            for(var i = 0; i < document.querySelectorAll('.blender_thumb').length; i++){
+                console.log(i);
+                document.querySelectorAll('.blender_thumb')[i].style.transitionDelay = (300*(i+1)).toString() + "ms";
+            }
+        }
+        else{
+            for(var i = document.querySelectorAll('.blender_thumb').length-1; i >= 0; i--){
+                console.log(i);
+                document.querySelectorAll('.blender_thumb')[i].style.transitionDelay = 1800-(300*(i+1)).toString() + "ms";
+            }
+        }
+            document.querySelectorAll('.blender_thumb').forEach(function(thumb){
+                thumb.setAttribute('data-scroll', 'in');            
+            })
+    },
+    onHidden: function(){
+        document.querySelectorAll('.blender_thumb').forEach(function(thumb){
+            thumb.style.transitionDelay = "50ms";
+            thumb.setAttribute('data-scroll', 'out');
+        })       
+    }
+})
 // Variáveis 
 const layer_1 = document.getElementById('layer1');
 const layer_2 = document.getElementById('layer2');
@@ -9,7 +39,6 @@ var waiting = false;
 const layerMoon = document.getElementById('moon');
 const layerMoonLight = document.getElementById('moonLight');
 
-const target = document.querySelectorAll('[data-anime]');
 
 const linksModal = document.querySelectorAll('.balao_link');
 const btnsModalClose = document.querySelectorAll('.modal_fechar');
@@ -21,7 +50,6 @@ linksModal.forEach(function(btn){
         document.body.style.overflow = "hidden";
     };
 })
-
 btnsModalClose.forEach(function(btn){
     btn.onclick = function(){
         var modal = (btn.closest(".modal").style.display = "none");
@@ -71,16 +99,4 @@ var animeScroll = function(){
             layerMoonLight.style.opacity = formulaOpacidade;
         }
     }
-
-    //Animação de elementos
-    const windowTop = window.pageYOffset + (window.innerHeight * .8);
-    var bodyRect = document.body.getBoundingClientRect();
-    target.forEach(function(element){
-        var elemRect = element.getBoundingClientRect();
-        var offset = elemRect.top - bodyRect.top;
-        if(windowTop > offset)
-            element.classList.add('animate');
-        else
-            element.classList.remove('animate');
-    });
 }

@@ -9,6 +9,7 @@
     <meta property='og:image' content='//dannhz.github.io/imgs/og_image.jpg'/>
     <meta property='og:url' content='//dannhz.github.io'/>
     <title>Dannhz</title>
+    <link rel="sortcut icon" href="imgs/favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
@@ -17,11 +18,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <nav>
             <ul>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#conhecimentos">Conhecimentos</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#trajetoria">Trajetória</a></li>
             </ul>
         </nav>
@@ -38,17 +40,17 @@
             <div class="redes_icons">
                 <a href="http://linkedin.com/in/danilo-caetano" target="_blank">
                     <div class="redes_icon">
-                        <img src="imgs/icons/linkedin.png" alt="Linkedin Icon">
+                        <img src="imgs/icons/linkedin.svg" alt="Linkedin Icon">
                     </div>
                 </a>
-                <a href="https://pt.quora.com/profile/Danilo-63" target="_blank">
+                <a href="https://www.artstation.com/dannhz" target="_blank">
                     <div class="redes_icon">
-                        <img src="imgs/icons/quora.png" alt="Quora Icon">
+                        <img src="imgs/icons/artstation.svg" alt="Artstation Icon">
                     </div>
                 </a>
                 <a href="http://github.com/dannhz" target="_blank">
                     <div class="redes_icon">
-                        <img src="imgs/icons/github.png" alt="GitHub Icon">
+                        <img src="imgs/icons/github.svg" alt="GitHub Icon">
                     </div>
                 </a>
             </div>
@@ -60,17 +62,17 @@
 
     <section class="sobre" id="sobre">
         <div class="container">
-            <div class="sobre_img" data-anime="-"></div>
+            <div class="sobre_img" data-direction="-"></div>
             <div class="sobre_txt">
                 <header>
-                    <h3 data-anime="left">Sobre mim</h3>
+                    <h3 data-direction="left">Sobre mim</h3>
                 </header>
-                <p data-anime="left">Olá. Sou Danilo Barreto.</p>
-                <p data-anime="left">Sou Técnico em Mecatrônica e Desenvolvimento de Sistemas e graduado em Análise e Desenvolvimento de Sistemas.</p>
-                <p data-anime="left">A fim de aperfeiçoar meus estudos em UI Design, coloquei em prática meu conhecimento em Web para a elaboração deste site do zero, 
+                <p data-direction="left">Olá. Sou Danilo Barreto.</p>
+                <p data-direction="left">Sou Técnico em Mecatrônica e Desenvolvimento de Sistemas e graduado em Análise e Desenvolvimento de Sistemas.</p>
+                <p data-direction="left">A fim de aperfeiçoar meus estudos em UI Design, coloquei em prática meu conhecimento em Web para a elaboração deste site do zero, 
                     aproveitando o serviço de hospedagem fornecido pelo GitHub.</p>
-                <h3 data-anime="left">Alguns de meus Hobbies...</h3>
-                <div class="hobbies_container" data-anime="-">
+                <h3 data-direction="left">Alguns de meus Hobbies...</h3>
+                <div class="hobbies_container">
                     <div class="hobbie_icon">
                         <div class="icon_overlay">
                             <p>Filmes</p>
@@ -96,7 +98,7 @@
                         <img src="imgs/icons/games.png" alt="movies">
                     </div>
                 </div>
-                <p class="sobre_quora">Veja mais em meu <a href="https://pt.quora.com/profile/Danilo-63" target="_blank">Quora</a></p>
+                <p class="sobre_quora">Veja mais em meu <a href="http://linkedin.com/in/danilo-caetano" target="_blank">Linkedin</a></p>
             </div>
         </div>
     </section>
@@ -109,19 +111,18 @@
                 <p>
                     Aqui exponho meus conhecimentos específicos de softwares e ferramentas 
                     dos quais uso ou já usei com frequência para a solução de problemas, principalmente, 
-                    como aluno nas etecs e faculdade entre os anos de 2018 até agora.</p>
+                    como aluno nas etecs e faculdade entre os anos de 2018 até agora.
+                </p>
             </div>
             <div class="conhecimentos_img">
                 <div class="layerMoon1" id="moonLight"></div>
                 <div class="layerMoon2"></div>
                 <div class="layerMoon3" id="moon"></div>
                 <div class="layerMoon4"></div>
-
-
             </div>
 
             <div class="softwares">
-                <div class="ramo" data-anime="right">
+                <div class="ramo" data-direction="right">
                     <p class="ramo_titulo">Linguagens de Programação</p>
                     <div class="softwares_container linguagens">
                         <div class="software_icon">
@@ -157,7 +158,7 @@
                     </div>
                 </div>
 
-                <div class="ramo" data-anime="left">
+                <div class="ramo" data-direction="left">
                     <p class="ramo_titulo">Web Design</p>
                     <div class="softwares_container web_design">
                         <div class="software_icon">
@@ -181,7 +182,7 @@
                     </div>
                 </div>
 
-                <div class="ramo" data-anime="right">
+                <div class="ramo" data-direction="right">
                     <p class="ramo_titulo">Design & Ilustração</p>
                     <div class="softwares_container design">
                         <div class="software_icon">
@@ -211,7 +212,7 @@
                     </div>
                 </div>
 
-                <div class="ramo" data-anime="left">
+                <div class="ramo" data-direction="left">
                     <p class="ramo_titulo">Escritório</p>
                     <div class="softwares_container escritorio">
                         <div class="software_icon">
@@ -240,7 +241,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="ramo" data-anime="right">
+                <div class="ramo" data-direction="right">
                     <p class="ramo_titulo">Banco de Dados</p>
                     <div class="softwares_container bd">
                         <div class="software_icon">
@@ -258,7 +259,7 @@
                     </div>
                 </div>
 
-                <div class="ramo" data-anime="left">
+                <div class="ramo" data-direction="left">
                     <p class="ramo_titulo">Outros</p>
                     <div class="softwares_container outros">
                         <div class="software_icon">
@@ -290,6 +291,120 @@
             </div>
         </div>
     </section>
+
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <header>
+                <h3>Portfolio</h3>
+            </header>
+            <p>Blender</p>
+
+            <div class="portfolio_container" id="portfolio_blender">
+                <div class="blender_thumb">
+                    <div class="blender_pic" id="delta">
+                        <div class="icon_overlay">
+                            <p>Delta</p>
+                        </div>
+                    </div>
+                    <div class="artstation_info">
+                        <div class="artstation_views">
+                            <img src="imgs/icons/eye2.svg" alt="">
+                            <p>36</p>
+                        </div>
+                        <div class="artstation_likes">
+                            <img src="imgs/icons/like.svg" alt="">
+                            <p>2</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="blender_thumb">
+                    <div class="blender_pic" id="conde-dofus">
+                        <div class="icon_overlay">
+                            <p>Harebourg - Dofus</p>
+                        </div>
+                    </div>
+                    <div class="artstation_info">
+                        <div class="artstation_views">
+                            <img src="imgs/icons/eye2.svg" alt="">
+                            <p>39</p>
+                        </div>
+                        <div class="artstation_likes">
+                            <img src="imgs/icons/like.svg" alt="">
+                            <p>1</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="blender_thumb">
+                    <div class="blender_pic" id="conde-wakfu">
+                        <div class="icon_overlay">
+                            <p>Harebourg - Wakfu</p>
+                        </div>
+                    </div>
+                    <div class="artstation_info">
+                        <div class="artstation_views">
+                            <img src="imgs/icons/eye2.svg" alt="">
+                            <p>39</p>
+                        </div>
+                        <div class="artstation_likes">
+                            <img src="imgs/icons/like.svg" alt="">
+                            <p>1</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="blender_thumb">
+                    <div class="blender_pic" id="jigen">
+                        <div class="icon_overlay">
+                            <p>Jigen</p>
+                        </div>
+                    </div>
+                    <div class="artstation_info">
+                        <div class="artstation_views">
+                            <img src="imgs/icons/eye2.svg" alt="">
+                            <p>52</p>
+                        </div>
+                        <div class="artstation_likes">
+                            <img src="imgs/icons/like.svg" alt="">
+                            <p>1</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="blender_thumb">
+                    <div class="blender_pic" id="qilby">
+                        <div class="icon_overlay">
+                            <p>Qilby</p>
+                        </div>
+                    </div>
+                    <div class="artstation_info">
+                        <div class="artstation_views">
+                            <img src="imgs/icons/eye2.svg" alt="">
+                            <p>55</p>
+                        </div>
+                        <div class="artstation_likes">
+                            <img src="imgs/icons/like.svg" alt="">
+                            <p>2</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="sobre_quora">Todas minhas ilustrações estão disponíveis em meu <a href="https://www.artstation.com/dannhz" target="_blank">Artstation</a></p>
+
+            <p>Arduino/IOT</p>
+            <div class="portfolio_container" data-direction="left">
+                <div class="arduino_thumb" id="port_arduino">
+                    <div class="icon_overlay">
+                        <p>Arduino -- Whatsapp</p>
+                    </div>
+                </div>
+                <div class="arduino_thumb" id="port_wemos">
+                    <div class="icon_overlay">
+                        <p>Wemos D1 -- Telegram</p>
+                    </div>
+                </div>
+            </div>
+            <p class="sobre_quora">Mais detalhes em meu <a href="https://github.com/dannhz" target="_blank">Github</a></p>
+
+        </div>
+    </section>
     <section class="trajetoria" id="trajetoria">
         <div class="container">
             <header>
@@ -297,7 +412,7 @@
             </header>
         
             <div class="timeline">
-                <div class="balao" data-anime="-">
+                <div class="balao" data-direction="-">
                     <div class="balao_header">
                         <p>Microlins</p>
                     </div>
@@ -310,7 +425,7 @@
                     </div>
                 </div>
 
-                <div class="balao" data-anime="-">
+                <div class="balao" data-direction="-">
                     <div class="balao_header">
                         <p>Unip</p>
                     </div>
@@ -323,7 +438,7 @@
                     </div>
                 </div>
 
-                <div class="balao" data-anime="-">
+                <div class="balao" data-direction="-">
                     <div class="balao_header">
                         <p>Etec Martin Luther King</p>
                     </div>
@@ -336,7 +451,7 @@
                     </div>
                 </div>
 
-                <div class="balao" data-anime="-">
+                <div class="balao" data-direction="-">
                     <div class="balao_header">
                         <p>Etec Prof. Aprígio Gonzaga</p>
                     </div>
@@ -440,7 +555,7 @@
                     <video width="43%" controls>
                         <source src="imgs/trajetoria/Mlk1.mp4" type="video/mp4">
                     </video>
-                    <img src="imgs/trajetoria/Mlk4.png" alt="" width="43%">
+                    <img src="imgs/trajetoria/Mlk4.jpg" alt="" width="43%">
                 </div>
             </div>
         </div>
@@ -468,6 +583,7 @@
                 <ul>
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#conhecimentos">Conhecimentos</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#trajetoria">Trajetória</a></li>
                 </ul>
             </nav>
@@ -475,17 +591,17 @@
             <div class="redes_icons">
                 <a href="http://linkedin.com/in/danilo-caetano" target="_blank">
                     <div class="redes_icon">
-                        <img src="imgs/icons/linkedin.png" alt="Linkedin Icon">
+                        <img src="imgs/icons/linkedin.svg" alt="Linkedin Icon" >
                     </div>
                 </a>
-                <a href="https://pt.quora.com/profile/Danilo-63" target="_blank">
+                <a href="https://www.artstation.com/dannhz" target="_blank">
                     <div class="redes_icon">
-                        <img src="imgs/icons/quora.png" alt="Quora Icon">
+                        <img src="imgs/icons/artstation.svg" alt="Artstation Icon">
                     </div>
                 </a>
                 <a href="http://github.com/dannhz" target="_blank">
                     <div class="redes_icon">
-                        <img src="imgs/icons/github.png" alt="GitHub Icon">
+                        <img src="imgs/icons/github.svg" alt="GitHub Icon">
                     </div>
                 </a>
             </div>
@@ -494,6 +610,8 @@
             <p>2021. Design por <b>Dannhz - Danilo Barreto</b></p>
         </div>
     </footer>
+    <script src="js/scroll-out.js"></script>
+
     <script src="js/script.js"></script>
 </body>
 </html>
