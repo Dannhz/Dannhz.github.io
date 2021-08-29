@@ -426,11 +426,12 @@ float: right;
 
 #port_arduino{
     background: url(../imgs/portfolio/Arduino.png);
-    background-size: 350px 350px;
+    background-size: cover;
 }
 #port_wemos{
     background: url(../imgs/portfolio/WeMos.png);
-    background-size: 350px 350px;
+    background-size: cover;
+
 }
 
 
@@ -691,10 +692,6 @@ footer .redes_icon:hover{
 /* Responsividade - Mobile */
 @media only screen and (max-width: 768px){
 
-    .icon_overlay:hover{
-        padding-top: 40px;
-    }
-
     nav ul{
         text-align: center;
         padding: 12px 0px;
@@ -780,8 +777,16 @@ footer .redes_icon:hover{
         display: block;
         margin: 0 auto;
     }
+
+    .arduino_thumb{
+        width: 230px;
+        height: 230px;
+        position: relative;
+        margin: 30px 30px;
+    }
+
     .icon_overlay p{
-        font-size: 13px;
+        font-size: 12px;
     }
     .balao::after, .balao::before, .timeline::after{
         display: none;
