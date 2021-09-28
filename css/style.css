@@ -367,22 +367,20 @@ nav ul li a:hover{
     width: 100%;
     height: 40px;
     bottom: 0;
-    padding: 5px 55px;
+    padding: 0 20px;
     border: 1px solid black;
     border-top: none;
     align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
-.artstation_info img{
-    transform: translateY(3px);
-    opacity: .7;
-    margin-left: 2px;
+
+.artstation_tools img{
+width: 38px;
+transform: translateY(1px);
 }
-.artstation_likes{
-float: right;
-}
-.artstation_views{
-    float: left;
-}
+
 
 .artstation_info p{
     width: 20px;
@@ -401,6 +399,10 @@ float: right;
     background: url(../imgs/portfolio/delta.png);
     background-size: cover;
 }
+#kawaki{
+    background: url(../imgs/portfolio/kawaki.png);
+    background-size: cover;
+}
 #conde-dofus{
     background: url(../imgs/portfolio/conde-dofus.png);
     background-size: cover;
@@ -417,7 +419,25 @@ float: right;
     background: url(../imgs/portfolio/qilby.png);
     background-size: cover;
 }
+#kawaki .icon_overlay{background-image: url("../imgs/portfolio/kawaki-wire.png");}
+#delta .icon_overlay{background-image: url("../imgs/portfolio/delta-wire.png");}
+#conde-dofus .icon_overlay{background-image: url("../imgs/portfolio/conde-dofus-wire.png");}
+#conde-wakfu .icon_overlay{background-image: url("../imgs/portfolio/harebourg-wakfu-wire.png");}
+#jigen .icon_overlay{background-image: url("../imgs/portfolio/jigen-wire.png");}
 
+#qilby .icon_overlay{background-image: url("../imgs/portfolio/qilby-wire.png");}
+
+
+.blender_thumb .icon_overlay{
+    width: inherit;   
+    background-size: cover;
+    background-color: rgba(0, 0, 0, .33);
+    background-position: -1px -2px
+}
+.blender_thumb .icon_overlay:hover{
+    opacity: .8;
+}
+#kawaki ~ .artstation_info{background-color: #8b3741;}
 #delta ~ .artstation_info{background-color: #95627d;}
 #conde-dofus ~ .artstation_info{background-color: #2b6469;}
 #conde-wakfu ~ .artstation_info{background-color: #2b4d69;}
